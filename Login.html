@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html >
+<head><title>Login</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("zm.png");
+    }
+.login-container {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    }
+.login-form {
+    padding: 20px;
+    }
+.login-form h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    }
+.input-group {
+    margin-bottom: 20px;
+    }
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    }
+.phone-input {
+    display: flex;
+    align-items: center;
+    }
+.phone-input span {
+    background-color: #f4f4f4;
+    padding:8.4px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    }
+.phone-input input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-left: none;
+    border-radius: 0 4px 4px 0;
+    }
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    }
+button.alternate-login {
+    background-color: #f4f4f4;
+    color: #000;
+    }
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    color: #aaa;
+    }
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    }
+.footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+}
+</style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <div class="phone-input">
+                    <span><img src="india.webp" width="20px" height="15px"> +91</span>
+                    <input type="text" id="phone" placeholder="Phone" maxlength="10" minlength="10">
+                </div>
+            </div>
+            <button id="sendOtpBtn">Send One Time Password</button>
+            <div class="separator">or</div>
+            <button class="alternate-login"><a href="https://www.zomato.com/hyderabad/restaurants?utm_source=google&utm_medium=cpc&utm_campaign=Gsearch_
+                P-MWeb_O-NA_C-Brand_A-AllUser_SC-Generic_L-SouthIndia-20231122&utm_term=zomato&gad_source=1&gclid=EAIaIQobChMI4bbh2czrhgMVZqNmAh0SEAkTEAAYASAAEgK4-_D_BwE" style="text-decoration: none; color:black;">
+                 <img src="msg.png" style="width:20px;height:20px;position: absolute;"> <span style="padding-left: 30px">Continue with Email</span></a></button>
+            <button class="alternate-login"><a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2Fgsi%2F
+                select%3Fclient_id%3D442739719837.apps.googleusercontent.com%26ux_mode%3Dpopup%26ui_mode%3Dcard%26as%3DnI0ZB274W4DItJKxA38mEA%26channel_id%3Dfeaccea58f98d0462b2d2a094220c732a28327c6ad99b999de714c5a9dc91174%
+                26origin%3Dhttps%3A%2F%2Faccounts.zomato.com&faa=1&rip=1&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1577512436%3A1718938878562908&ddm=0" style="text-decoration:none; color:black;">Sign in with Google</a></button>
+            <div class="footer">
+                <p>New to Zomato? <a href="signup.html">Create account</a></p>
+            </div>
+        </div>
+    </div>
+  
+<script >
+let otpTimerId; // Global variable to store the timer ID
+document.getElementById('sendOtpBtn').addEventListener('click', sendOtp);
+function sendOtp() {
+    // Logic to send OTP
+    console.log('OTP sent');
+    // Clear any existing timer
+    if (otpTimerId) {
+        clearTimeout(otpTimerId);
+    }
+    // Disable the button to prevent multiple requests
+    const sendOtpBtn = document.getElementById('sendOtpBtn');
+    sendOtpBtn.disabled = true;
+    sendOtpBtn.textContent = 'Resend OTP in 60s';
+    // Start a new timer for 60 seconds
+    otpTimerId = setTimeout(() => {
+        sendOtpBtn.disabled = false;
+        sendOtpBtn.textContent = 'Send One Time Password';
+    }, 60000); // 60000 milliseconds = 60 seconds
+}
+</script>
+</body>
+</html>
+
+
+

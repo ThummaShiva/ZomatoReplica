@@ -1,0 +1,460 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<style>
+body
+{  margin: 0;
+   padding: 0;
+   text-decoration: none;
+}
+header
+{  width: 100%;
+   height: 70vh;
+   overflow:hidden;
+   position: relative;
+   object-fit:cover;
+}
+.header-image
+{
+   position: absolute;
+   top:-20vh;
+   z-index: -1;
+   padding-top: 10px;
+}
+.nav
+{  display:flex;
+   margin:1vh 10vw;
+   justify-content:space-between;
+   color:white;
+   font-size:1em;
+   font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+.nav-bar{
+    display:flex;
+    margin-left:800px;
+}
+.nav-bar li{
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:lighter ;
+    padding-left:30px;
+    list-style:none;
+}
+.head
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    margin-top:7vh;
+    align-items:center;
+}
+.logo
+{
+    width:20vw;
+}
+.head h3{
+    font-size:2.1em;
+    color:whitesmoke;
+    font-weight: lighter;
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+.location
+{   font-family: helvetica ;
+    font-weight: lighter;
+    color:rgb(56,56,56);
+}
+.pos{position:absolute;}
+.ind{ padding-left: 50px;}
+.sentance
+{  font-family:helvetica;
+   font-weight: 100;
+   color:gray;
+   font-size:19px;
+}
+.sec{
+    display:grid;
+    justify-content:center;
+    grid-column-gap:20px ;
+    grid-row-gap:30px;
+    grid-template-columns:340px 340px 340px ;
+    grid-template-rows:auto ;
+}
+.box
+{   border: 1px solid rgb(235,233,233) ;
+    box-shadow:0 1px 3px rgb(226,223,223);
+    width:340px;
+    height:60px;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.box div
+{   align-items:center;
+    overflow:hidden;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    margin:20px;
+}
+.box div span
+{   color:rgb(65,64,64);
+    font-size:19.2px;
+    display:inline-block;
+    overflow:hidden ;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-family:helvetica ;
+}
+.footerlogo
+{   margin-left:105px;
+    width:150px;
+    height:30px;
+}
+.footer
+{   color: gray;
+    background-color:rgba(243,243,250,5);
+    padding:40px 120px;
+}
+.first
+{   display:flex;
+    justify-content: space-between;
+}
+.first-1
+{   display:flex;
+    margin-right: 90px;
+}
+.first span
+{   padding-left: 8px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border:1px solid lightslategray;
+    border-radius:5px;
+    margin-right:10px;
+    font-weight: 400;
+}
+.box4{ margin-right:150px;}
+.indflag
+{   padding-top:2px;
+    position:absolute;
+}
+.indtext{padding-left:30px;}
+.internet
+{   padding-top:2px;
+    position:absolute;
+}
+.eng{ padding-left:30px;}
+.second
+{   font-family: sans-serif;
+    line-height: 0.1;
+    display:flex;
+    justify-content:space-around;
+    margin:0 0 0 0;
+    font-weight: 100;
+}
+.second div
+{   line-height:-2 ;
+    width:10px;
+}
+.second h5
+{   font-weight:100;
+    color:rgb(22,22,22);
+    white-space: nowrap;
+    font-size:0.8rem ;
+}
+.second h6
+{   display:inline-block;
+    width:150px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    text-decoration: none;
+    color:gray;
+    font-size:0.74rem;
+}
+.second h5+h6
+{
+    margin-top:-2px;
+}
+.iconscontainer
+{   display:flex;
+    justify-content:space-around;
+    align-items: center;
+    width:80%;
+    margin:5px auto;
+    color:black;
+}  
+#i1{margin-right:8px;}
+#i2{margin-right:8px;}
+#i3{margin-right:8px;}
+#i4{margin-right:8px;}
+.app{margin-top:17px;}
+.google{margin-top: 12px;}
+.copyrt
+{   padding:10px 0;
+    font-family: helvetica;
+    color:gray;
+    font-size:0.73rem;
+    width:79.7%;
+    margin-left: 100px;
+}
+hr{width:83.7%;}
+</style>
+   <link rel="icon" href="zomatologo">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css"
+   integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA=="
+   crossorigin="anonymous" referrerpolicy="no-referrer" />         
+<title>ZOMATO</title>
+</head>
+<body>
+    <div>
+        <header >
+            <div class="nav">
+                <ul class="nav-bar">
+                 <li><a href="https://www.zomato.com/partner-with-us" style="text-decoration:none; color:white" >Add Restaurant</a></li>
+                 <li ><a href="login.html" style="text-decoration:none; color:white">Log in</a></li>
+                 <li><a href="signup.html" style="text-decoration:none; color:white">Sign up</a></li>
+                </ul>
+            </div>
+           <div class="head">
+           <img class="logo" src="https://b.zmtcdn.com/web_assets/8313a97515fcb0447d2d77c276532a511583262271.png">
+                <center><h3>Find the best restaurants,cafés<br/> and bars in India</h3></center>
+            </div>
+            <div class="header-image" >
+             <img  src="namezomato.avif" width="1550px" >
+            </div>
+        </header>
+    </div>
+    <div class="location">
+       <h1> <center>Popular locations in <span class="pos"><img src="india.webp" width="40px" height="25px">
+    </span><span class="ind"><b> <strong>India</strong></b></span></center></h1>
+    </div><br/>
+    <div class="sentance">
+      <center> From swanky upscale restaurants to the cosiest hidden gems serving the most incredible food,<br/>
+         Zomato covers it all. Explore menus, and millions of restaurant photos and reviews from users<br/> 
+         just like you, to find your next great meal.</center>   
+    </div>
+    <br/><br/><br/>
+    <div class="sec">
+      <div class="box">
+         <div><a href="https://www.zomato.com/agra" style="text-decoration: none;color:black"><span>Agra Restaurants</span><small style="padding-left:140px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/ahmedabad" style="text-decoration: none;color:black"><span>Ahmedabad Restaurants</span><small style="padding-left:75px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/ajmer" style="text-decoration: none;color:black"><span>Ajmer Restaurants</span><small style="padding-left:125px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+        <div><a href="https://www.zomato.com/ajmer" style="text-decoration: none;color:black"><span>Alappuzha Restaurants</span><small style="padding-left:87px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/ajmer" style="text-decoration: none;color:black"><span>Allahabad Restaurants</span><small style="padding-left:91px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/bengaluru" style="text-decoration: none;color:black"><span>Bengalauru Restaurants</span><small style="padding-left:78px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/bhopal" style="text-decoration: none;color:black"><span>Bhopal Restaurants</span><small style="padding-left:115px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/bhubaneswar" style="text-decoration: none;color:black"><span>Bhubaneswar Restaurants</span><small style="padding-left:59px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/chandigarh" style="text-decoration: none;color:black"><span>Chandigarh Restaurants</span><small style="padding-left:74px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/chennai" style="text-decoration: none;color:black"><span>Chennai Restaurants</span><small style="padding-left:106px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/coimbatore" style="text-decoration: none;color:black"><span>Coimbatore Restaurants</span><small style="padding-left:76px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/darjeeling" style="text-decoration: none;color:black"><span>Darjeeling Restaurants</span><small style="padding-left:91px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/dehradun" style="text-decoration: none;color:black"><span>Dehradun Restaurants</span><small style="padding-left:91px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/ncr" style="text-decoration: none;color:black"><span>Delhi NCR Restaurants</span><small style="padding-left:86px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/gangtok" style="text-decoration: none;color:black"><span>Gangtok Restaurants</span><small style="padding-left:105px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/goa" style="text-decoration: none;color:black"><span>Goa Restaurants</span><small style="padding-left:139px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/guntur" style="text-decoration: none;color:black"><span>Guntur Restaurants</span><small style="padding-left:116px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/guwahati" style="text-decoration: none;color:black"><span>Guwahati Restaurants</span><small style="padding-left:94.5px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/haridwar" style="text-decoration: none;color:black"><span>Haridwar Restaurants</span><small style="padding-left:99px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/hyderabad" style="text-decoration: none;color:black"><span>Hyderabad Restaurants</span><small style="padding-left:80px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/indore" style="text-decoration: none;color:black"><span>Indore Restaurants</span><small style="padding-left:118.5px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/jaipur" style="text-decoration: none;color:black"><span>Jaipur Restaurants</span><small style="padding-left:122px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/jammu" style="text-decoration: none;color:black"><span>Jammu Restaurants</span><small style="padding-left:110px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/jhansi" style="text-decoration: none;color:black"><span>Jhansi Restaurants</span><small style="padding-left:115px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/jodhpur" style="text-decoration: none;color:black"><span>Jodhpur Restaurants</span><small style="padding-left:104px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/kanpur" style="text-decoration: none;color:black"><span>Kanpur Restaurants</span><small style="padding-left:110px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/kharagpur" style="text-decoration: none;color:black"><span>Kharagpur Restaurants</span><small style="padding-left:81px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/kochi" style="text-decoration: none;color:black"><span>Kochi Restaurants</span><small style="padding-left:125px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/kolkata" style="text-decoration: none;color:black"><span>Kolkata Restaurants</span><small style="padding-left:109px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/lucknow" style="text-decoration: none;color:black"><span>Lucknow Restaurants</span><small style="padding-left:92px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/madhurai" style="text-decoration: none;color:black"><span>Madhurai Restaurants</span><small style="padding-left:91px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/mangalore" style="text-decoration: none;color:black"><span>Mangalore Restaurants</span><small style="padding-left:81.5px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/mumbai" style="text-decoration: none;color:black"><span>Mumbai Restaurants</span><small style="padding-left:99px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/mysore" style="text-decoration: none;color:black"><span>Mysore Restaurants</span><small style="padding-left:108px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/nagpur" style="text-decoration: none;color:black"><span>Nagpur Restaurants</span><small style="padding-left:109.5px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/nashik" style="text-decoration: none;color:black"><span>Nashik Restaurants</span><small style="padding-left:106.5px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/patna" style="text-decoration: none;color:black"><span>Patna Restaurants</span><small style="padding-left:121px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/puducherry" style="text-decoration: none;color:black"><span>Puducherry Restaurants</span><small style="padding-left:74px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/pune" style="text-decoration: none;color:black"><span>Pune Restaurants</span><small style="padding-left:119.3px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/raipur" style="text-decoration: none;color:black"><span>Raipur Restaurants</span><small style="padding-left:111px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/ranchi" style="text-decoration: none;color:black"><span>Ranchi Restaurants</span><small style="padding-left:111.7px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/shimla" style="text-decoration: none;color:black"><span>Shimla Restaurants</span><small style="padding-left:103px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/srinagar" style="text-decoration: none;color:black"><span>Srinagar Restaurants</span><small style="padding-left:96px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/surat" style="text-decoration: none;color:black"><span>Surat Restaurants</span><small style="padding-left:123px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+       <div><a href="https://www.zomato.com/tirupati" style="text-decoration: none;color:black"><span>Tirupati Restaurants</span><small style="padding-left:99px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/trivandrum" style="text-decoration: none;color:black"><span>Trivandrum Restaurants</span><small style="padding-left:72px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/udaipur" style="text-decoration: none;color:black"><span>Udaipur Restaurants</span><small style="padding-left:100px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/vadodara" style="text-decoration: none;color:black"><span>Vadodara Restaurants</span><small style="padding-left:79px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/vijayawada" style="text-decoration: none;color:black"><span>Vijayawada Restaurants</span><small style="padding-left:71px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+      <div class="box">
+         <div><a href="https://www.zomato.com/visakhapatnam" style="text-decoration: none;color:black"><span>Visakhapatnam Restaurants</span><small style="padding-left:35px ;position: absolute;"><i class="fas fa-chevron-right"></i></small></a></div>
+      </div>
+     </div>
+     <br/><br/> 
+   <div class="wrapper">
+   <footer>
+    <section class="footer">
+        <div class="sec2">
+         <div class="first">
+            <div>
+              <img class="footerlogo" src="smallzomato.avif" >
+             </div>
+             <div class="first-1">
+               <span ><div class="indflag"><img src="flag.png" width="20" height="15px" ></div>
+                <div class="indtext">India  <small><i class="fas fa-chevron-down"></i></small></div></span> 
+               <span ><div class="internet"><img src="internet.webp" width="20" height="15px" ></div>
+                <div class="eng">English  <small><i class="fas fa-chevron-down"></i></small></div></span>
+             </div>
+          </div>
+       </div><br/>
+      <div class="second">
+         <div class="div1">
+            <h5>ABOUT ZOMATO</h5>
+            <h6><a href="https://www.zomato.com/who-we-are" style="text-decoration:none; color:gray">Who We Are</a></h6>
+            <h6><a href="https://blog.zomato.com/" style="text-decoration:none; color:gray">Blog</a></h6>
+            <h6><a href="https://www.zomato.com/careers" style="text-decoration:none; color:gray">Work With Us</a></h6>
+            <h6><a href="https://www.zomato.com/investor-relations" style="text-decoration:none; color:gray">Investor Relations</a></h6>
+            <h6><a href="https://www.zomato.com/report-fraud" style="text-decoration:none; color:gray">Report Fraud</a></h6>
+            <h6><a href="https://blog.zomato.com/press-kit" style="text-decoration:none; color:gray">Press Kit</a></h6>
+            <h6><a href="https://www.zomato.com/contact" style="text-decoration:none; color:gray">Contact Us</a></h6>
+         </div>
+         <div>
+            <h5>ZOMAVERSE</h5>
+            <h6><a href="https://www.zomato.com/" style="text-decoration:none; color:gray">Zomato</a></h6>
+            <h6><a href="https://blinkit.com/" style="text-decoration:none; color:gray">Blinkit</a></h6>
+            <h6><a href="https://www.feedingindia.org/" style="text-decoration:none; color:gray">Feeding India</a></h6>
+            <h6><a href="https://www.hyperpure.com/" style="text-decoration:none; color:gray">Hyperpure</a></h6>
+            <h6><a href="https://www.zomato.com/zomaland" style="text-decoration:none; color:gray">Zomaland</a></h6>
+         </div>
+         <div>
+            <h5>FOR RESTAURANTS</h5>
+            <h6><a href="https://www.zomato.com/partner-with-us" style="text-decoration:none; color:gray">Partner With Us</a></h6>
+            <h6><a href="https://play.google.com/store/apps/details?id=com.application.services.partner&hl=en_IN&gl=US&pli=1" style="text-decoration:none; color:gray">Apps For You</a></h6>
+         </div>
+         <div>
+            <h5>LEARN MORE</h5>
+            <h6><a href="https://www.zomato.com/policies/privacy/" style="text-decoration:none; color:gray">Privacy</a></h6>
+            <h6><a href="https://www.zomato.com/policies/security/" style="text-decoration:none; color:gray">Security</a></h6>
+            <h6><a href="https://www.zomato.com/policies/terms-of-service/" style="text-decoration:none; color:gray">Terms</a></h6>
+            <h6><a href="https://www.zomato.com/directory" style="text-decoration:none; color:gray">Sitemap</a></h6>
+         </div>
+         <div class="box4">
+            <h5>SOCIAL LINKS</h5>
+            <div class="iconscontainer">
+               <a href="https://in.linkedin.com/company/zomato" style="color:black"><i id="i1" class="fa-brands fa-linkedin"></i></a>
+               <a href="https://www.instagram.com/zomato/" style="color:black"><i id="i2" class="fab fa-instagram"></i>
+               <a href="https://twitter.com/x/migrate?tok=7b2265223a222f7a6f6d61746f222c2274223a313731383436353939347d39c41ea8427d419cb2e5bdbf23ac3d64" style="color:black"><i id="i3" class="fab fa-twitter"></i>
+               <a href="https://www.youtube.com/zomato" style="color:black"><i id="i4" class="fab fa-youtube"></i>
+               <a href="https://www.facebook.com/zomato" style="color:black" ><i  class="fab fa-facebook"></i>
+            </div>
+            <a href="https://www.zomato.com/mobile"><img class="app" src="appstore.webp" width="120" height="40px"></a>
+            <a href="https://www.zomato.com/mobile"><img class="google" src="googleplay.webp" width="120" height="40px"></a>
+         </div>
+      </div>
+      <br/>
+      <hr/>
+      <p class="copyrt">&copy; By continuing past this page, you agree to our Terms 
+         of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks
+          are properties of their respective owners. 2008-2024 © Zomato™ Ltd. 
+          All rights reserved.</p>
+     </div>
+    </section>
+   </footer>  
+</body>
+</html>

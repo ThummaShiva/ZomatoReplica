@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head><title>OTP</title>
+  <style>
+    .modal {
+        font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("zm.png");
+           }
+    .modal-content {
+        background-color: #fff;
+            padding: 20px;
+            margin-top: 150px;
+            margin-left: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            height: 350px;
+           }
+    .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+           }
+    .close:hover,
+    .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+           }
+  </style>
+</head>
+<body>
+<form action="https://www.zomato.com/" id="otp1" name="otp" onsubmit="return validateOTP(this)">
+<div id="otpModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>Enter OTP</h2>
+    <p>Verification code has been sent to your email, <span id="email"></span>, please enter the same here to complete the signup. Valid for 10 minutes.</p>
+    <input type="text" name="text1" id="otp" placeholder="OTP" style=" width: 91%; padding: 10px;border: 1px solid #ccc; border-radius: 4px;"><br/><br/>
+    <input type="submit"  style="width:96.5%; height:40px;background-color: #fe5e64;color:white ;border-radius: 5px;border-color:#fe5e64; ;" value="Proceed"><br/>
+    <h2 ><div id="timer" style="text-align: center;">00:30</div></h2>
+    <p style="text-align: center;">Didn't receive OTP? <span id="resend" onclick="resendOTP()" style="color: blue; cursor: pointer;">Resend Now</span></p>
+  </div>
+</div>
+</form>
+<script>
+var timerInterval;
+function startTimer(duration, display) {
+  var timer = duration, minutes, seconds;
+  timerInterval = setInterval(function () {
+    minutes = parseInt(timer / 60, 10);
+    seconds = parseInt(timer % 60, 10);
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    display.textContent = minutes + ":" + seconds;
+
+    if (--timer < 0) {
+      clearInterval(timerInterval);
+      display.textContent = "00:00";
+    }
+  }, 1000);
+}
+
+window.onload = function () {
+  var email = "v*****5@gmail.com"; // You can dynamically set this value
+  document.getElementById('email').textContent = email;
+
+  var thirtySeconds = 30;
+  var display = document.querySelector('#timer');
+  startTimer(thirtySeconds, display);
+};
+function closeModal() {
+  document.getElementById('otpModal').style.display = "none";
+}
+function validateOTP(x) 
+  {
+    var o=x.text1.value;
+    var reg1=/^\d{5}$/;
+    if(o==''||(!reg1.test(o)))
+    {
+      alert("Please enter valid OTP");
+      x.text1.focus();
+      return false;
+    }
+    return true;
+  }
+function resendOTP() {
+  clearInterval(timerInterval);
+  var thirtySeconds = 30;
+  var display = document.querySelector('#timer');
+  startTimer(thirtySeconds, display);
+}
+</script>
+</body>
+</html>
+
+

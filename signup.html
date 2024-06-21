@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Sign Up</title>
+<style>
+body {
+        font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.1);
+            margin: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url("zm.png");
+
+        }
+.signup-container {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 370px;
+    height:"450px";
+   }
+.signup-form {
+    padding: 20px;
+   }
+.signup-form h2 {
+    margin: 0 0 20px;
+    color: #534a4a; 
+    }
+.input-group {
+    margin-bottom: 20px;
+    }
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    }
+.input-group input[type="text"],
+.input-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    }
+.input-group input[type="checkbox"] {
+    margin-right: 4px;
+    }
+.input-group label[for="terms"] {
+    display: inline;
+    margin: 0;
+    }
+.input-group a {
+    color: #ff4d4d;
+    text-decoration: none;
+    }
+button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;
+    }
+button.alternate-signup {
+    background-color: #f4f4f4;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    }
+button.alternate-signup img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    }
+.separator {
+    text-align: center;
+    }
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    }
+.footer a {
+    color: #ff4d4d;
+    text-decoration: none;
+    }
+</style>
+</head>
+<body>
+    <script>
+        function validate(x)
+        {
+            var a=x.fullname.value;
+            var b=x.email.value;
+            var c=x.checkbox1.checked;
+            var reg1=/^[a-zA-Z0-9]{8,}$/;
+            var reg2=/^[a-zA-Z0-9]{1,}\@gmail\.com$/;
+        
+            if(a=='')
+            {
+                alert("Please enter your Name");
+                x.fullname.focus();
+                return false;
+
+            }
+            if(b=='')
+            {
+                alert("Please enter your Email");
+                x.email.focus();
+                return false;   
+            }
+            if(!(reg1.test(a)))
+            {
+                alert('Name should contain atleast 8 characters');
+                x.fullname.focus();
+                return false;
+            }
+            if(!(reg2.test(b)))
+            {
+                alert('Invalid Email.It should be of the form Eg:"****@gmail.com"');
+                x.email.focus();
+                return false;
+            }
+            if(!c)
+            {
+                alert('Please click the checkbox');
+                return false;
+            }
+            return true; 
+        }
+    </script>
+    <form action="otp.html" method="post" onsubmit="return validate(this)">
+    <div class="signup-container">
+        <div class="signup-form">
+            <h2>Sign up</h2>
+            <div class="input-group">
+                <input type="text" id="fullName" name="fullname" placeholder="Full Name" style="width:92%;">
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" style="width:92%;">
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="terms" name="checkbox1"/>
+                <label for="terms" style="font-size: 10px;">I agree to Zomato's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and <a href="#">Content <span style="padding-left: 30px;">Policies</span></a></label>
+            </div>
+            <input type="submit" id="signupBtn" style="background-color: #7c8397; width:329px;height:35px;border-radius:4px" value="Create Account">
+            <div class="separator">or</div>
+            <button  class="alternate-signup" style="border-color: rgb(39, 125, 162); height:40px">
+                <a href="https://www.zomato.com/partners/login" style="text-decoration: none;"><img src="gggl.png" alt="Google" style="width:30px; height:30px"> </a>
+            </button>
+            <div class="footer">
+                <p>Already have an account? <a href="login.html " style="text-decoration:none;color:rgb(195, 27, 27);">Log in</a></p>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
+
+
+
